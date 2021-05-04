@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MyFactsLab"
+             mc:Ignorable="d" x:Class="MyFactsLab.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="listView"
+              RowHeight="70" ItemSelected="OnSelection" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5, 5, 0, 5"
+                                 Orientation="Horizontal"
+                                 Spacing="15">
+
+                            <Label Text="{Binding ShortFact}"
+                                   FontAttributes="Bold"
+                                   FontSize="Medium" />
+                            <Image Source="{Binding Img}"
+                                   WidthRequest="50"
+                                   HeightRequest="50">
+                               
+                            </Image>
+
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
